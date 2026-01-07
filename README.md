@@ -1,8 +1,7 @@
 # DAG Build System
 
 ## Overview
-This project implements a simple build system, based on a  
-**Directed Acyclic Graph (DAG)**. Each node represents a task, and edges represent
+This project implements a simple build system, based on a  **Directed Acyclic Graph (DAG)**. Each node represents a task, and edges represent
 dependencies between tasks.
 
 ## Features
