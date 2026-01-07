@@ -1,0 +1,50 @@
+{
+  "capacity": { "CPU": 4, "RAM": 16 },
+
+  "targets": ["all"],
+
+  "nodes": [
+    {
+      "id": "step1",
+      "deps": [],
+      "action": { "type": "shell", "cmd": "echo Pokrecem korak 1" },
+      "outputs": ["output1.txt"],
+      "resources": { "CPU": 1, "RAM": 2 }
+    },
+    {
+      "id": "step2",
+      "deps": ["step1"],
+      "action": { "type": "shell", "cmd": "echo Pokrecem korak 2" },
+      "outputs": ["output2.txt"],
+      "resources": { "CPU": 2, "RAM": 4 }
+    },
+    {
+      "id": "step3",
+      "deps": ["step1"],
+      "action": { "type": "shell", "cmd": "echo Pokrecem korak 3" },
+      "outputs": ["output3.txt"],
+      "resources": { "CPU": 2, "RAM": 4 }
+    },
+    {
+      "id": "step4",
+      "deps": ["step1"],
+      "action": { "type": "shell", "cmd": "echo Pokrecem korak 4" },
+      "outputs": ["output4.txt"],
+      "resources": { "CPU": 2, "RAM": 4 }
+    },
+    {
+      "id": "step5",
+      "deps": ["step1"],
+      "action": { "type": "shell", "cmd": "echo Pokrecem korak 5" },
+      "outputs": ["output5.txt"],
+      "resources": { "CPU": 2, "RAM": 4 }
+    },
+    {
+      "id": "all",
+      "deps": ["step2","step3","step4","step5"],
+      "action": null,
+      "outputs": [],
+      "resources": { "CPU": 0, "RAM": 0 }
+    }
+  ]
+}
